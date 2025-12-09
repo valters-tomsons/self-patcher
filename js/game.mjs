@@ -39,7 +39,7 @@ const games = {
 	BLUS30056: {
 		title: "Mercenaries 2: World in Flames™ [BLUS30056] [01.03]",
 		platform: "PowerPC64",
-		elfSHA256: "a220ff195c16b9718657a3b3b7977562ed3bfee5d6118ff8139cf7cb2af77a3e",
+		elfSHA256: "4d8370fc3ce9e743ec4627ec95b59728c7e484c34e490083947943d02f115620",
 		patch: await getPatch("BLUS30056")
 	},
 }
