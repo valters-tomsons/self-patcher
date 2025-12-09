@@ -25,7 +25,7 @@ window.load = async function(file) {
 
 	window.game = null
 	try {
-		window.game = Game.findFromElf(window.elf);
+		window.game = await Game.findFromElf(window.elf);
 	} catch(error) {
 		alert(error);
 		return;
