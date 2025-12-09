@@ -29,40 +29,19 @@ const games = {
 		patch: null
 	},
 
-	LittleBigPlanet: {
-		title: "LittleBIGPlanet",
+	BLES00323: {
+		title: "Mercenaries 2: World in Flames™ [BLES00323] [01.03]",
 		platform: "PowerPC64",
-		identifier: Uint8Array.fromAsciiString("LittleBigPlanet\x99\x00"),
-		patch: await applyPatchBase("base_littlebigplanet", "littlebigplanet")
+		elfSHA256: "a220ff195c16b9718657a3b3b7977562ed3bfee5d6118ff8139cf7cb2af77a3e",
+		patch: await getPatch("BLES00323")
 	},
 
-	LittleBigPlanet_2: {
-		title: "LittleBIGPlanet 2",
+	BLES00323: {
+		title: "Mercenaries 2: World in Flames™ [BLUS30056] [01.03]",
 		platform: "PowerPC64",
-		identifier: Uint8Array.fromAsciiString("LittleBigPlanet\xe2\x84\xa22\x00"),
-		patch: await applyPatchBase("base_littlebigplanet", "littlebigplanet_2")
+		elfSHA256: "a220ff195c16b9718657a3b3b7977562ed3bfee5d6118ff8139cf7cb2af77a3e",
+		patch: await getPatch("BLUS30056")
 	},
-
-	LittleBigPlanet_3: {
-		title: "LittleBIGPlanet 3",
-		platform: "PowerPC64",
-		identifier: Uint8Array.fromAsciiString("LittleBigPlanet\xe2\x84\xa23\x00"),
-		patch: await applyPatchBase("base_littlebigplanet", "littlebigplanet_3")
-	},
-
-	LittleBigPlanet_Vita: {
-		title: "LittleBIGPlanet Vita",
-		platform: "ARM",
-		identifier: Uint8Array.fromAsciiString("LittleBigPlanet\xe2\x84\xa2 PS Vita\x00"),
-		patch: await applyPatchBase("base_littlebigplanet", "littlebigplanet_vita")
-	},
-
-	LittleBigPlanet_PSP: {
-		title: "LittleBIGPlanet",
-		platform: "MIPS",
-		identifier: Uint8Array.fromAsciiString("LittleBigPlanet\xe2\x84\xa2\x00"),
-		patch: await applyPatchBase("base_littlebigplanet", "littlebigplanet_psp")
-	}
 }
 
 export const GameLoading = {
@@ -86,7 +65,7 @@ export const GameLoading = {
 				found_game = game_info;
 			}
 		}
-
+		
 		if(found_game === undefined) {
 			throw `No pre-configured games for this ELF have been found. ELF SHA256: ${elfSHA256}`;
 		}
