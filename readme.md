@@ -1,14 +1,13 @@
 # (S)ELF Patcher
-Quickly edit Playstation binaries in your browser!
 
-This was made specifically for LittleBigPlanet, as the master server has been taken offline - submit an Issue/PR for **your** favourite game to be added
+Quickly apply patches to Playstation binaries entirely in your browser!
 
-### Features
-* Entirely in your browser
-* Full JS console available for custom patching scripts
-* Full support for ELF files
-* Able to instantly decrypt PS3 SELF files via SCETool
-* Able to encrypt to SELF (PS3 binaries only) via SCETool
-* Game detection (currently just for LBP) - easily extendable to any other title
+Tool created by [505e06b2](https://github.com/505e06b2)
 
-### [Give it a shot!](https://505e06b2.github.io/self-patcher/)
+## Patches
+* Mercenaries 2 [BLES00323]
+    * SSL bypass for custom servers
+    * Skip intro videos (optional)
+
+* Mercenaries 2 [BLUS30056]
+  * SSL bypass for custom servers
